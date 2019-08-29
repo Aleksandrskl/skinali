@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   background-color: #ffffff;
+  z-index: 99;
 
   &-wrap {
     display: flex;
@@ -33,6 +34,38 @@
   }
 
   .menu {
+    width: 100%;
+    left: 0;
+    position: fixed;
+    top: 80px;
+    ;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #4370ce;
+    z-index: 0;
+    transition: 0.2s;
+    transform: translateY(-100%);
+
+    &--active {
+      transform: translateY(0);
+      position: absolute;
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    &__link {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 25px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
     &-button {
       display: flex;
       flex-direction: column;
